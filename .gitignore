@@ -1,0 +1,6 @@
+app.exe
+build/
+.venv/
+__pycache__/
+.env
+*.pyc
