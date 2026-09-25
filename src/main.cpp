@@ -1,13 +1,12 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
+#include "math_utils.h"
+
 using namespace std;
 
-int add(int a, int b) {
-    return a + b;
-}
-
 int main() {
-    cout << "Self-Healing CI/CD Engine Test Project"<<endl;
-    cout << "2 + 3 = " << add(2, 3) << endl;
+    cout << "Self-Healing CI/CD Engine Test Project\n";
+    cout << "2 + 3 = " << add(2, 3) << '\n';
 
     return 0;
 }
