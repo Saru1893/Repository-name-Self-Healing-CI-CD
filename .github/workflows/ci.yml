@@ -30,3 +30,9 @@ jobs:
 
       - name: Run tests
         run: ./test_app
+
+      - name: Compile with AddressSanitizer
+        run: g++ -std=c++17 -Wall -Wextra -Werror -fsanitize=address -g src/main.cpp -o app_asan
+
+      - name: Run AddressSanitizer
+        run: ./app_asan
