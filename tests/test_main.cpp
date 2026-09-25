@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    if (add(2, 3) != 6) {
+    if (add(2, 3) != 5) {
         cerr << "Test failed: add(2, 3)\n";
         return 1;
     }
