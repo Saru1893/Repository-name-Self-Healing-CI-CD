@@ -36,3 +36,9 @@ jobs:
 
       - name: Run AddressSanitizer
         run: ./app_asan
+
+      - name: Compile sanitizer test
+        run: g++ -std=c++17 -fsanitize=address -g src/sanitizer_test.cpp -o sanitizer_test
+
+      - name: Run sanitizer test
+        run: ./sanitizer_test
