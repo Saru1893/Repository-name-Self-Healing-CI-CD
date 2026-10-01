@@ -3,18 +3,12 @@
 using namespace std;
 
 int main() {
-    int* arr = new int[3];
+    int* value = new int(42);
 
-    arr[0] = 10;
-    arr[1] = 20;
-    arr[2] = 30;
+    delete value;
 
-    // Intentional heap-buffer-overflow
-    arr[3] = 40;
-
-    cout << arr[3] << '\n';
-
-    delete[] arr;
+    // Intentional use-after-free
+    cout << *value << '\n';
 
     return 0;
 }
