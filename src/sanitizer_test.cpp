@@ -3,12 +3,12 @@
 using namespace std;
 
 int main() {
-    int* value = new int(42);
+    int arr[3] = {10, 20, 30};
 
-    delete value;
+    // Intentional stack-buffer-overflow
+    arr[5] = 50;
 
-    // Intentional use-after-free
-    cout << *value << '\n';
+    cout << arr[5] << '\n';
 
     return 0;
 }
